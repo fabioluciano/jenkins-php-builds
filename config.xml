@@ -14,23 +14,7 @@
       </strategy>
     </jenkins.model.BuildDiscarderProperty>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.4">
-    <configVersion>2</configVersion>
-    <userRemoteConfigs>
-      <hudson.plugins.git.UserRemoteConfig>
-        <url>https://gitlab.com/fabioluciano/relsiafi.git</url>
-        <credentialsId>ecbac46b-94d8-4ba2-bb2c-44aa27644edc</credentialsId>
-      </hudson.plugins.git.UserRemoteConfig>
-    </userRemoteConfigs>
-    <branches>
-      <hudson.plugins.git.BranchSpec>
-        <name>*/master</name>
-      </hudson.plugins.git.BranchSpec>
-    </branches>
-    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
-    <submoduleCfg class="list"/>
-    <extensions/>
-  </scm>
+  <scm class="hudson.scm.NullSCM"/>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -192,8 +176,8 @@
     <hudson.plugins.plot.PlotPublisher plugin="plot@1.9">
       <plots>
         <hudson.plugins.plot.Plot>
-          <title>A - Lines of code</title>
-          <yaxis>Lines of Code</yaxis>
+          <title>A - Linhas de Código</title>
+          <yaxis>Linhas de Código</yaxis>
           <series>
             <hudson.plugins.plot.CSVSeries>
               <file>build/logs/phploc.csv</file>
@@ -222,8 +206,8 @@
           <logarithmic>false</logarithmic>
         </hudson.plugins.plot.Plot>
         <hudson.plugins.plot.Plot>
-          <title>B - Structures Containers</title>
-          <yaxis>Count</yaxis>
+          <title>B - Conteiners de Estruturas</title>
+          <yaxis>Contagem</yaxis>
           <series>
             <hudson.plugins.plot.CSVSeries>
               <file>build/logs/phploc.csv</file>
@@ -251,8 +235,8 @@
           <logarithmic>false</logarithmic>
         </hudson.plugins.plot.Plot>
         <hudson.plugins.plot.Plot>
-          <title>C - Average Length</title>
-          <yaxis>Average Lines of Code</yaxis>
+          <title>C - Média de Comprimento</title>
+          <yaxis>Média de Línhas de Código</yaxis>
           <series>
             <hudson.plugins.plot.CSVSeries>
               <file>build/logs/phploc.csv</file>
@@ -280,8 +264,8 @@
           <logarithmic>false</logarithmic>
         </hudson.plugins.plot.Plot>
         <hudson.plugins.plot.Plot>
-          <title>D - Relative Cyclomatic Complexity</title>
-          <yaxis>Cyclomatic Complexity by Structure</yaxis>
+          <title>D - Complexidade Ciclomática Relativa</title>
+          <yaxis>Complexidade Ciclomática por Estrutura</yaxis>
           <series>
             <hudson.plugins.plot.CSVSeries>
               <file>build/logs/phploc.csv</file>
@@ -308,8 +292,8 @@
           <logarithmic>false</logarithmic>
         </hudson.plugins.plot.Plot>
         <hudson.plugins.plot.Plot>
-          <title>E - Types of Classes</title>
-          <yaxis>Count</yaxis>
+          <title>E - Tipos de Classes</title>
+          <yaxis>Contagem</yaxis>
           <series>
             <hudson.plugins.plot.CSVSeries>
               <file>build/logs/phploc.csv</file>
@@ -337,8 +321,8 @@
           <logarithmic>false</logarithmic>
         </hudson.plugins.plot.Plot>
         <hudson.plugins.plot.Plot>
-          <title>F - Types of Methods</title>
-          <yaxis>Count</yaxis>
+          <title>F - Tipos de Métodos</title>
+          <yaxis>Contagem</yaxis>
           <series>
             <hudson.plugins.plot.CSVSeries>
               <file>build/logs/phploc.csv</file>
@@ -368,8 +352,8 @@
           <logarithmic>false</logarithmic>
         </hudson.plugins.plot.Plot>
         <hudson.plugins.plot.Plot>
-          <title>G - Types of Constants</title>
-          <yaxis>Count</yaxis>
+          <title>G - Tipos de Constantes</title>
+          <yaxis>Contagem</yaxis>
           <series>
             <hudson.plugins.plot.CSVSeries>
               <file>build/logs/phploc.csv</file>
@@ -397,8 +381,8 @@
           <logarithmic>false</logarithmic>
         </hudson.plugins.plot.Plot>
         <hudson.plugins.plot.Plot>
-          <title>I - Testing</title>
-          <yaxis>Count</yaxis>
+          <title>I - Testes</title>
+          <yaxis>Contagem</yaxis>
           <series>
             <hudson.plugins.plot.CSVSeries>
               <file>build/logs/phploc.csv</file>
@@ -425,8 +409,8 @@
           <logarithmic>false</logarithmic>
         </hudson.plugins.plot.Plot>
         <hudson.plugins.plot.Plot>
-          <title>AB - Code Structure by Logical Lines of Code</title>
-          <yaxis>Logical Lines of Code</yaxis>
+          <title>AB - Estrutura de Código por Linhas de Código Lógicas</title>
+          <yaxis>Linhas de Código Lógicas</yaxis>
           <series>
             <hudson.plugins.plot.CSVSeries>
               <file>build/logs/phploc.csv</file>
@@ -455,8 +439,8 @@
           <logarithmic>false</logarithmic>
         </hudson.plugins.plot.Plot>
         <hudson.plugins.plot.Plot>
-          <title>H - Types of Functions</title>
-          <yaxis>Count</yaxis>
+          <title>H - Tipos de Funções</title>
+          <yaxis>Contagem</yaxis>
           <series>
             <hudson.plugins.plot.XMLSeries>
               <file>build/logs/phploc.csv</file>
@@ -478,8 +462,8 @@
           <logarithmic>false</logarithmic>
         </hudson.plugins.plot.Plot>
         <hudson.plugins.plot.Plot>
-          <title>BB - Structure Objects</title>
-          <yaxis>Count</yaxis>
+          <title>BB - Objetos de Estrutura</title>
+          <yaxis>Contagem</yaxis>
           <series>
             <hudson.plugins.plot.CSVSeries>
               <file>build/logs/phploc.csv</file>
